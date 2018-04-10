@@ -14,7 +14,7 @@ public class DemandHolderSingleton {
     private String parameterB;
 
     private static class DemandHolder {
-        public static DemandHolderSingleton INSTANCE = new DemandHolderSingleton();
+        static final DemandHolderSingleton INSTANCE = new DemandHolderSingleton();
     }
 
     private DemandHolderSingleton() {
@@ -30,5 +30,13 @@ public class DemandHolderSingleton {
         //loadConfigFile();
         parameterA = properties.getProperty("parameterA");
         parameterB = properties.getProperty("parameterB");
+    }
+
+    public String getParameterA() {
+        return parameterA;
+    }
+
+    public String getParameterB() {
+        return parameterB;
     }
 }

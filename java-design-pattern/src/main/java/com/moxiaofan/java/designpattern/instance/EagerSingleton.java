@@ -5,7 +5,7 @@ package com.moxiaofan.java.designpattern.instance;
  */
 
 /**
- * 恶汉模式
+ * 饿汉模式
  */
 public class EagerSingleton {
     private static EagerSingleton INSTANCE = new EagerSingleton();
