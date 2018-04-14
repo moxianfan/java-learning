@@ -5,32 +5,33 @@ package com.moxiaofan.java.designpattern.builder;
  */
 
 
-public class DellComputerBuilder implements ComputerBuilder{
+public class HPConcreteBuilder implements ComputerBuilder{
+
     Computer computer = new Computer();
 
     @Override
     public void buildMaster() {
-        computer.setMaster("Dell Master");
+        computer.setMaster("HP Master");
     }
 
     @Override
     public void buildScreen() {
-        computer.setScreen("Dell Screen");
+        computer.setScreen("HP Screen");
     }
 
     @Override
     public void buildKeyboard() {
-        computer.setKeyboard("Dell Keyboard");
+        computer.setKeyboard("HP Keyboard");
     }
 
     @Override
     public void buildAudio() {
-        computer.setAudio("Dell Audio");
+        computer.setAudio("HP Audio");
     }
 
     @Override
     public void buildMouse() {
-        computer.setMouse("Dell Mouse");
+        computer.setMouse("HP Mouse");
     }
 
     @Override
