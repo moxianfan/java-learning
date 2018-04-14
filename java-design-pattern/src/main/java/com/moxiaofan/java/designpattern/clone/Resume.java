@@ -1,7 +1,6 @@
 package com.moxiaofan.java.designpattern.clone;
 
 import java.io.*;
-import java.util.ArrayList;
 
 /**
  * Created by wangxy on 2018/4/12.
@@ -20,25 +19,22 @@ public class Resume implements Serializable, Cloneable {
         work = new WorkExperience();
     }
 
-    //设置个人信息
     public void setPersonalInfo(String sex, Integer age) {
         this.sex = sex;
         this.age = age;
     }
 
-    //设置工作经历
     public void setWorkExperience(String workDate, String company) {
         work.setWorkDate(workDate);
         work.setCompany(company);
     }
 
-    //显示
     public void display() {
         System.out.println(String.format("%s %s %s", name, sex, age));
         System.out.println(String.format("工作经历：%s %s", work.getWorkDate(), work.getCompany()));
     }
 
-    //浅复制
+    //shallow copy
     @Override
     public Object clone() {
         Object obj = null;
@@ -50,7 +46,9 @@ public class Resume implements Serializable, Cloneable {
         return obj;
     }
 
-    //深复制
+    /**
+     * deep copy
+     */
     /*@Override
     protected Object clone() throws CloneNotSupportedException {
         int age = this.age;
@@ -63,13 +61,14 @@ public class Resume implements Serializable, Cloneable {
         return copy;
     }*/
 
-    //深复制
+    /**
+     * deep copy by Serializable
+     */
     public Object deepClone() throws IOException, ClassNotFoundException {
-        //将对象写到流里
         ByteArrayOutputStream bo = new ByteArrayOutputStream();
         ObjectOutputStream oo = new ObjectOutputStream(bo);
         oo.writeObject(this);
-        //从流里读出来
+
         ByteArrayInputStream bi = new ByteArrayInputStream(bo.toByteArray());
         ObjectInputStream oi = new ObjectInputStream(bi);
         return (oi.readObject());
