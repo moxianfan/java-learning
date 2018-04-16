@@ -1,4 +1,4 @@
-package com.moxiaofan.java.designpattern.clone;
+package com.moxiaofan.java.designpattern.prototype;
 
 import java.io.Serializable;
 
