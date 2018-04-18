@@ -7,8 +7,8 @@ package com.moxiaofan.java.designpattern.adapter;
 
 public class ObjectAdapterMain {
     public static void main(String[] args) {
-        Usb usb = new Usber();
-        ObjectAdapter objectAdapter = new ObjectAdapter(usb);
+        Usb usber = new Usber();
+        ObjectAdapter objectAdapter = new ObjectAdapter(usber);
         objectAdapter.isPs2();
     }
 }
