@@ -22,6 +22,6 @@ public class BuilderMain {
         //ComputerBuilder computerBuilder = new DellConcreteBuilder();
         Director director = new Director(computerBuilder);
         Computer hpComputer = director.comstructComputer();
-        System.out.printf(hpComputer.getAudio());
+        System.out.println(hpComputer.getAudio());
     }
 }
