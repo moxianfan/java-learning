@@ -4,8 +4,7 @@ package com.moxiaofan.java.leetcode;
  * Created by wangxy on 2018/6/2.
  */
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * 给定一个字符串，找出不含有重复字符的最长子串的长度。
@@ -25,6 +24,15 @@ public class LongestSubstring {
                 }
             }
         }
+        /*HashMap<Character, Integer> map = new HashMap<>();
+        for (int j = 0, i = 0; j < length; j++) {
+            if (map.containsKey(s.charAt(j))) {
+                i = Math.max(map.get(s.charAt(j)), i);
+            }
+            max = Math.max(max, j - i + 1);
+            map.put(s.charAt(j), j + 1);
+        }*/
+
         return max;
     }
 
