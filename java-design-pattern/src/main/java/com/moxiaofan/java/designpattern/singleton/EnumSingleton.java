@@ -5,5 +5,20 @@ package com.moxiaofan.java.designpattern.singleton;
  */
 
 
-public class EnumSingleton {
+public enum EnumSingleton {
+    /**
+     * 数据源
+     */
+    DATASOURCE;
+
+    private DBConnection connection = null;
+
+    private EnumSingleton() {
+        connection = new DBConnection();
+    }
+
+    public DBConnection getConnection() {
+        return connection;
+    }
 }
+

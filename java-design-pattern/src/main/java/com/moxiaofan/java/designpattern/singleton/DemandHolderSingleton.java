@@ -8,6 +8,8 @@ import java.util.Properties;
 
 /**
  * Initialization On Demand Holder idiom
+ * <p>
+ * 静态内部类
  */
 public class DemandHolderSingleton {
     private String parameterA;
