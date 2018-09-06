@@ -3,7 +3,9 @@ package com.moxiaofan.java.designpattern.prototype;
 import java.io.Serializable;
 
 /**
- * Created by wangxy on 2018/4/12.
+ *
+ * @author wangxy
+ * @date 2018/4/12
  */
 
 

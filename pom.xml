@@ -12,6 +12,7 @@
         <module>java-design-pattern</module>
         <module>java-multithreading</module>
         <module>leetcode</module>
+        <module>java-data-structure</module>
     </modules>
 
 </project>
