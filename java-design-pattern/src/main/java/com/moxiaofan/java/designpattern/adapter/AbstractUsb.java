@@ -5,7 +5,7 @@ package com.moxiaofan.java.designpattern.adapter;
  */
 
 
-public abstract class AbstractUsb implements MutilUsb{
+public abstract class AbstractUsb implements MutilUsb {
 
     @Override
     public void usb1() {
