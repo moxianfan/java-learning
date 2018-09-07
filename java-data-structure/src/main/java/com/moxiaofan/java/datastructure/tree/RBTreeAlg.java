@@ -13,8 +13,8 @@ public class RBTreeAlg {
      * 对红黑树的节点(x)进行左旋转
      * <p>
      * 左旋示意图(对节点x进行左旋)：
-     *    px                              px
-     *    /                               /
+     *      px                              px
+     *     /                               /
      *    x                               y
      *   /  \      --(左旋)-.            / \                #
      *  lx   y                         x   ry
@@ -24,6 +24,7 @@ public class RBTreeAlg {
     private void leftRotate(RBTNode x) {
         RBTNode y = x.right;
         x.right = y.left;
+
         if (y.left != null) {
             y.left.parent = x;
         }
@@ -70,8 +71,7 @@ public class RBTreeAlg {
 
         if(y.parent == null) {
             this.mRoot = x;
-        }
-        else{
+        } else {
             if(y.parent.right == x) {
                 y.parent.right = x;
             }
@@ -81,7 +81,6 @@ public class RBTreeAlg {
         }
 
         x.right = y;
-
         y.parent = x;
     }
 }
