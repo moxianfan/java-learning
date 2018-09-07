@@ -68,7 +68,7 @@ public class RBTreeAlg {
 
         x.parent = y.parent;
 
-        if(y.parent != null) {
+        if(y.parent == null) {
             this.mRoot = x;
         }
         else{
