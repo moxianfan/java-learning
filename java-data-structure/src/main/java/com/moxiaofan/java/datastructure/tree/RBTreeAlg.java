@@ -9,6 +9,8 @@ import com.moxiaofan.java.datastructure.tree.RedBlackTree.RBTNode;
 
 public class RBTreeAlg {
 
+    private RBTNode mRoot;
+
     /**
      * 对红黑树的节点(x)进行左旋转
      * <p>

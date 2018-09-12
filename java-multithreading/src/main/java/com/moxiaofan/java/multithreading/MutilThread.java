@@ -6,4 +6,7 @@ package com.moxiaofan.java.multithreading;
 
 
 public class MutilThread {
+    public static void main(String[] args) {
+
+    }
 }
