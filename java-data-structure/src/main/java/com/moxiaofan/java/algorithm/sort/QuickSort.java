@@ -1,15 +1,9 @@
-package com.moxiaofan.java.leetcode;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+package com.moxiaofan.java.algorithm.sort;
 
 /**
- * Created by wangxy on 2018/8/9.
+ * @author wangxy
+ * @date 2018/9/6
  */
-
 
 public class QuickSort {
 
@@ -21,46 +15,7 @@ public class QuickSort {
         }
     }
 
-
-    private static void quickSort(int[] arr, int low, int high) {
-        if (low > high) {
-            return;
-        }
-        int i = low;
-        int j = high;
-        int index = arr[low];
-
-        while (i < j) {
-            while (i < j && arr[j] > index) {
-                j--;
-            }
-
-            while (i < j && arr[i] < index) {
-                i++;
-            }
-
-            if (i < j) {
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-            }
-        }
-
-        arr[low] = arr[i];
-        arr[i] = index;
-
-        quickSort(arr, low, i - 1);
-        quickSort(arr, i + 1, high);
-    }
-
-    private static void swap(int[] a, int i, int j) {
-        int temp = a[i];
-        a[i] = a[j];
-        a[j] = temp;
-    }
-
     public static void _quickSort(int[] list, int low, int high) {
-        new ConcurrentHashMap<>();
         if (low < high) {
             int middle = getMiddle(list, low, high);
             for(int l : list){

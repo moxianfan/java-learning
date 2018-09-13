@@ -67,7 +67,7 @@ public class LongestPalindrome {
         int len = s.length();
         for (int i = 0; i < len; i++) {
             for (int j = i; j < len; j++) {
-                if (isPre(s, i, j) && j - i + 1 > maxLength) {
+                if (isPalindrome(s, i, j) && j - i + 1 > maxLength) {
                     maxLength = j - i + 1;
                     maxStart = i;
                 }
@@ -77,14 +77,4 @@ public class LongestPalindrome {
         return s.substring(maxStart, maxStart + maxLength);
     }
 
-    private static boolean isPre(String s, int left, int right) {
-        while (left < right) {
-            if (s.charAt(left) != s.charAt(right)) {
-                return false;
-            }
-            left++;
-            right--;
-        }
-        return true;
-    }
 }
