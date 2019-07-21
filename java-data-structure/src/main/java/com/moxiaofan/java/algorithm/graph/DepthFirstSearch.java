@@ -80,7 +80,7 @@ public class DepthFirstSearch {
         }
         ArrayDeque<TreeNode> queue = new ArrayDeque<TreeNode>();
         queue.add(root);
-        while (queue.isEmpty() == false) {
+        while (!queue.isEmpty()) {
             TreeNode node = queue.remove();
             System.out.print(node.value + "    ");
             if (node.left != null) {

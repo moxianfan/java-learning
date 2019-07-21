@@ -11,11 +11,11 @@ import java.util.*;
  */
 public class LongestSubstring {
 
-    public int lengthOfLongestSubstring(String s) {
+    public static int lengthOfLongestSubstring(String s) {
         int length = s.length();
         int max = 0;
         Set<Character> set = new HashSet<>();
-        for (int i = 0; i < length; i++) {
+        /*for (int i = 0; i < length; i++) {
             for (int j = i + 1; j <= length; j++) {
                 if (unique(s, i, j, set)) {
                     max = Math.max(max, j - i);
@@ -23,17 +23,22 @@ public class LongestSubstring {
                     break;
                 }
             }
-        }
-        /*HashMap<Character, Integer> map = new HashMap<>();
+        }*/
+        HashMap<Character, Integer> map = new HashMap<>();
         for (int j = 0, i = 0; j < length; j++) {
             if (map.containsKey(s.charAt(j))) {
                 i = Math.max(map.get(s.charAt(j)), i);
             }
             max = Math.max(max, j - i + 1);
             map.put(s.charAt(j), j + 1);
-        }*/
+        }
 
         return max;
+    }
+
+    public static void main(String[] args) {
+        int length = lengthOfLongestSubstring("abca");
+        System.out.println("length="+length);
     }
 
     private static boolean unique(String s, int start, int end, Set<Character> set) {

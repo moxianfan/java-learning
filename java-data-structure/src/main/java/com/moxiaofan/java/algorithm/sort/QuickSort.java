@@ -18,8 +18,8 @@ public class QuickSort {
     public static void _quickSort(int[] list, int low, int high) {
         if (low < high) {
             int middle = getMiddle(list, low, high);
-            for(int l : list){
-                System.out.println( l);
+            for (int l : list) {
+                System.out.println(l);
             }
             System.out.println("111111111");
             _quickSort(list, low, middle - 1);
@@ -41,6 +41,30 @@ public class QuickSort {
         }
         list[low] = tmp;
         return low;
+    }
+
+    private static void quickSort(int[] list, int low, int high) {
+        if (low > high) {
+            return;
+        }
+        int i = low;
+        int j = high;
+        int key = list[low];
+        while (i < j) {
+            if (i < j && list[j] > key) {
+                j--;
+            }
+            if (i < j && list[i] < key) {
+                i++;
+            }
+            int tmp = list[i];
+            list[i] = list[j];
+            list[j] = tmp;
+        }
+        list[low] = list[i];
+        list[i] = key;
+        quickSort(list, low, i - 1);
+        quickSort(list, i + 1, high);
     }
 
 }
